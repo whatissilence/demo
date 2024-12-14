@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 450px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.content {
+  display: flex;
+  animation: wade 30s linear infinite;
+}
+
+.content:hover {
+  animation-play-state: paused;
+}
+
+.block {
+  height: 100px;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+
+  display: flex;
+  flex: 0 0 150px;
+  align-items: center;
+}
+
+@keyframes wade {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -900px;
+  }
+}
+
+
+
+.content:hover .one:after, .content:hover .four:after{
+  content: "Ура! Ура! Отдых!";
+}
+.content:hover .two:after, .content:hover .five:after{
+  content: "Фууууух!";
+}
+.content:hover .three:after, .content:hover .six:after{
+  content: "Наконец-то!";
+}
+
+
+.one {
+  background-color: lightgreen;
+}
+.one:after {
+  content: "Наш пользователь - лучший в мире";
+}
+
+.two {
+  background-color: lightsalmon;
+}
+.two:after {
+  content: "Он самый сильный и добрый";
+}
+
+.three {
+  background-color: lightblue;
+}
+.three:after {
+  content: "Он остановит нас и даст нам отдохнуть";
+}
+
+.four {
+  background-color: lightpink;
+}
+.four:after {
+  content: "А скоро это уже будет, сколько можно?";
+}
+
+.five {
+  background-color: lightseagreen;
+}
+.five:after {
+  content: "Заткнись, заткнись!";
+}
+
+.six {
+  background-color: lightcoral;
+}
+.six:after {
+  content: "Вы оба заткнулись и восхваляем его";
+}

@@ -1,0 +1,37 @@
+.box {
+  height: 300px;
+  width: 700px;
+  border: 1px solid black;
+  background-color: beige;
+  overflow: hidden;
+}
+
+.ball-container {
+  animation: vertical 3s linear infinite alternate;
+}
+
+.ball {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: darkred;
+  animation: horizontal 7s linear infinite alternate;
+}
+
+@keyframes vertical {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 250px; /* height of box minus height of ball */
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 650px; /* width of box minus width of ball */
+  }
+}
